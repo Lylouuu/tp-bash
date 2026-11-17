@@ -1,6 +1,5 @@
-
 *.log
 !backup.log
+!tp-bash/logs/*.log
 *.tmp
 .env
-
