@@ -1,5 +1,6 @@
 
 *.log
+!backup.log
 *.tmp
 .env
 

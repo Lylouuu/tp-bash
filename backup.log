@@ -1,0 +1,14 @@
++ set -Eeuo pipefail
++ DOSSIER=tp-bash/data
++ DESTINATION=backups
++ '[' '!' -d tp-bash/data ']'
++ mkdir -p backups
+++ date +%Y-%m-%d_%H-%M-%S
++ DATE=2026-11-17_12-34-42
++ ARCHIVE=backups/backup_2026-11-17_12-34-42.tar.gz
++ tar -czf backups/backup_2026-11-17_12-34-42.tar.gz tp-bash/data
++ echo 'Sauvegarde créée : backups/backup_2026-11-17_12-34-42.tar.gz'
+Sauvegarde créée : backups/backup_2026-11-17_12-34-42.tar.gz
++ find backups -type f -name 'backup_*.tar.gz' -mtime +7 -exec rm '{}' ';'
++ echo 'Nettoyage des anciennes sauvegardes terminé.'
+Nettoyage des anciennes sauvegardes terminé.
